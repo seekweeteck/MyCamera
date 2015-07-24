@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,7 +48,7 @@ public class MainActivity extends ActionBarActivity {
     public static final int MEDIA_TYPE_IMAGE = 1;
     private static final String TAG = "MyCam";
 
-    private ProgressDialog progressBar;
+    private ProgressBar progressBar;
     private int progressBarStatus = 0;
     private Handler progressBarbHandler = new Handler();
 
@@ -66,6 +67,7 @@ public class MainActivity extends ActionBarActivity {
         imageViewPicture = (ImageView)findViewById(R.id.imageViewPicture);
         textViewUri = (TextView)findViewById(R.id.textViewUri);
         buttonTakePicture = (Button)findViewById(R.id.buttonTakePicture);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
     }
 
     @Override
